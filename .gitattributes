@@ -1,2 +1,28 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Default: normalize all text files to LF in the repository
+* text=auto eol=lf
+
+# Shell scripts MUST stay LF — CRLF breaks bash on Linux
+*.sh text eol=lf
+
+# C++ and CUDA source files — LF
+*.cpp text eol=lf
+*.cu  text eol=lf
+*.h   text eol=lf
+*.cuh text eol=lf
+
+# Python files — LF
+*.py text eol=lf
+
+# Markdown and config — LF
+*.md   text eol=lf
+*.cfg  text eol=lf
+*.toml text eol=lf
+*.yml  text eol=lf
+*.yaml text eol=lf
+*.txt  text eol=lf
+
+# Binary files — no line ending conversion
+*.so    binary
+*.a     binary
+*.o     binary
+*.pyc   binary
